@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+</head>
+<body>
+    <h1>St. Xavier's Admission Form</h1>
+    <form action="submit_admission.php" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" name="student-name" required><br><br>
+            
+            <label for="date-of-birth">Date of Birth:</label>
+            <input type="date" id="date-of-birth" name="date-of-birth" required><br><br>
+            
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
+<br><br>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Parent/Guardian Information</legend>
+            <label for="parent-name">Parent Name:</label>
+            <input type="text" id="parent-name" name="parent-name" required><br><br>
+            
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact-number" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Admission Preferences</legend>
+            <label for="class-preference">Class Preference:</label>
+            <select id="class-preference" name="class-preference">
+                <option value="1">Class 8</option>
+                <option value="2">Class 9</option>
+                <option value="3">Class 10</option>
+                <option value="4">Class 11</option>
+                <option value="5">Class 12</option>
+            </select><br><br>
+            
+            <label>Co-curricular Activities:</label><br>
+            <input type="checkbox" id="sports" name="activities[]" value="Sports"> <label for="sports">Sports</label><br>
+            <input type="checkbox" id="music" name="activities[]" value="Music"> <label for="music">Music</label><br>
+            <input type="checkbox" id="art" name="activities[]" value="Art"> <label for="art">Art</label><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
